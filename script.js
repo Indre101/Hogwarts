@@ -19,10 +19,14 @@ function createStudentCards(student, data) {
   clnStudent.querySelector(".nameOftheStudent").textContent = student.fullname;
   clnStudent.querySelector(".house").textContent = student.house;
   clnStudent.querySelector(".number").textContent = data.indexOf(student) + 1;
-  const moodal = clnStudent.querySelector(".modal");
+  const modal = clnStudent.querySelector(".modal");
 
   clnStudent.querySelector(".mainStudentInfo").onclick = function() {
-    showModal(moodal);
+    showModal(modal);
+  };
+
+  clnStudent.querySelector(".close").onclick = function() {
+    hideModal(modal);
   };
 
   students.appendChild(clnStudent);
@@ -31,4 +35,9 @@ function createStudentCards(student, data) {
 function showModal(modal) {
   modal.classList.add("d-flex");
   modal.classList.remove("d-none");
+}
+
+function hideModal(modal) {
+  modal.classList.add("d-none");
+  modal.classList.remove("d-flex");
 }
