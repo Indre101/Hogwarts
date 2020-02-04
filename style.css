@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
+  border-radius: 15px;
 }
 
 
@@ -12,25 +13,49 @@
 }
 
 .imageOfAStudent {
-  width: 100%;
-  object-fit: contain;
+  height: 310px;
+  object-fit: cover;
   justify-self: center;
+  padding: 1.5vw;
+  width: 100%;
 }
 
 .students {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-gap: 2vw;
+  justify-content: center;
+  align-items: center;
 }
 
 .student {
-  width: 220px;
+  justify-content: center;
   align-self: center;
   justify-self: center;
+  width: 300px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 50px 50px;
-  padding: 0.5vw;
-  margin: 3.5vw;
-  justify-content: center;
-  background-color: beige;
+  grid-template-rows: auto 50px 31px;
+  background-color: black;
+  color: white;
+  height: 55vh;
+}
+
+.student h3,
+.student h4 {
+  padding: 0 1.5vw;
+
+}
+
+
+.d-flex {
+  display: flex;
+
+}
+
+.modalWindow {
+  position: absolute;
+  width: 300px;
+  height: 45vh;
+  background-color: rgba(222, 184, 135, 0.397);
+  height: inherit;
 }
