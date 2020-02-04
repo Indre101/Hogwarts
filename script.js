@@ -15,7 +15,7 @@ function init() {
 
 function createStudentCards(student, data) {
   const clnStudent = studentTemplate.cloneNode(true);
-  console.log(student.fullname);
+  // console.log(student.fullname);
   clnStudent.querySelector(".nameOftheStudent").textContent = student.fullname;
   clnStudent.querySelector(".house").textContent = student.house;
   clnStudent.querySelector(".number").textContent = data.indexOf(student) + 1;
