@@ -25,6 +25,7 @@
   grid-gap: 2vw;
   justify-content: center;
   align-items: center;
+  padding: 4vw 0;
 }
 
 .student {
@@ -35,9 +36,16 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.2s ease-in, box-shadow 0.2s ease-in-out;
+  transform-origin: bottom;
 
 }
 
+
+.student:hover {
+  box-shadow: 2px 3px 5px darkgrey;
+  transform: translateY(-5px) scale(1.02);
+}
 
 .mainStudentInfo {
   display: grid;
