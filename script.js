@@ -8,16 +8,17 @@ function init() {
     .then(res => res.json())
     .then(data => {
       data.forEach(student => {
-        createStudentCards(student);
+        createStudentCards(student, data);
       });
     });
 }
 
-function createStudentCards(student) {
+function createStudentCards(student, data) {
   const clnStudent = studentTemplate.cloneNode(true);
   console.log(student.fullname);
   clnStudent.querySelector(".nameOftheStudent").textContent = student.fullname;
   clnStudent.querySelector(".house").textContent = student.house;
+  clnStudent.querySelector(".number").textContent = data.indexOf(student) + 1;
 
   students.appendChild(clnStudent);
 }

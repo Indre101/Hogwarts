@@ -2,8 +2,88 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  border-radius: 15px;
+}
+
+
+.d-none {
+  display: none;
 }
 
 .imageOfAStudent {
-  width: 150px;
+  height: 310px;
+  object-fit: cover;
+  justify-self: center;
+  width: 100%;
+}
+
+.students {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  padding: 4vw 0;
+}
+
+.student {
+  width: 300px;
+  background-color: black;
+  color: white;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in, box-shadow 0.2s ease-in-out;
+  transform-origin: bottom;
+
+}
+
+
+.student:hover {
+  box-shadow: 2px 3px 5px darkgrey;
+  transform: translateY(-5px) scale(1.02);
+}
+
+.mainStudentInfo {
+  display: grid;
+  grid-template-rows: auto 10%;
+  height: 100%;
+  padding: 1.5vw;
+
+}
+
+
+
+.d-flex {
+  display: flex;
+
+}
+
+.modalWindow {
+  position: absolute;
+  width: 300px;
+  height: 45vh;
+  background-color: rgba(222, 184, 135, 0.397);
+  height: inherit;
+}
+
+
+.numbers {
+  display: flex;
+  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  justify-self: center;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+h4.house {
+  color: #cccc;
 }
