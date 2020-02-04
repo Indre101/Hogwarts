@@ -23,13 +23,13 @@
   width: 100%;
 }
 
-.students {
+div.students {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   grid-gap: 2vw;
   padding: 4vw 0;
   background-color: #ccc;
-  border-radius: none;
+  border-radius: unset;
 }
 
 .justify-align-center {
