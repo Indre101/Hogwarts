@@ -29,6 +29,7 @@
   grid-gap: 2vw;
   padding: 4vw 0;
   background-color: #ccc;
+  border-radius: none;
 }
 
 .justify-align-center {
