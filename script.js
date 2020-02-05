@@ -1,7 +1,7 @@
 const studentTemplate = document.querySelector(".studentTemplate").content;
 const students = document.querySelector(".students");
 
-window.addEventListener("load", init);
+window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   fetch("students1991.json")
