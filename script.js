@@ -22,22 +22,17 @@ function createStudentCards(student, data) {
   const modal = clnStudent.querySelector(".modal");
 
   clnStudent.querySelector(".mainStudentInfo").onclick = function() {
-    showModal(modal);
+    showHideElement(modal, "d-flex", "d-none");
   };
 
   clnStudent.querySelector(".close").onclick = function() {
-    hideModal(modal);
+    showHideElement(modal, "d-none", "d-flex");
   };
 
   students.appendChild(clnStudent);
 }
 
-function showModal(modal) {
-  modal.classList.add("d-flex");
-  modal.classList.remove("d-none");
-}
-
-function hideModal(modal) {
-  modal.classList.add("d-none");
-  modal.classList.remove("d-flex");
+function showHideElement(element, classToAdd, classtoRemove) {
+  element.classList.add(`${classToAdd}`);
+  element.classList.remove(`${classtoRemove}`);
 }
