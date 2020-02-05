@@ -120,6 +120,7 @@ button h4 {
   height: inherit;
   position: absolute;
   width: -webkit-fill-available;
+  width: -moz-available;
   transform-origin: top;
   align-self: flex-end;
   animation: widthToZero 0.5s linear forwards 1;
