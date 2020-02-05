@@ -21,18 +21,18 @@ function createStudentCards(student, data) {
   clnStudent.querySelector(".number").textContent = data.indexOf(student) + 1;
   const modal = clnStudent.querySelector(".modal");
 
-  clnStudent.querySelector(".mainStudentInfo").onclick = function() {
+  clnStudent.querySelector(".mainStudentInfo").onclick = function () {
     showHideElement(modal, "d-flex", "d-none");
   };
 
-  clnStudent.querySelector(".close").onclick = function() {
-    showHideElement(modal, "d-none", "d-flex");
+  clnStudent.querySelector(".close").onclick = function () {
+    showHideElement(modal, "d-flex", "d-none");
   };
 
   students.appendChild(clnStudent);
 }
 
 function showHideElement(element, classToAdd, classtoRemove) {
-  element.classList.add(`${classToAdd}`);
-  element.classList.remove(`${classtoRemove}`);
+  element.classList.toggle(`${classToAdd}`);
+  element.classList.toggle(`${classtoRemove}`);
 }
